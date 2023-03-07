@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-zinc-500 flex">
+    <div class="container mt-20 w-100 bg-slate-100 m-auto p-10 rounded-md shadow-lg max-w-sm">
+      <h1 class="text-xl font-thin text-center">DATA SERVICE KENDARAAN</h1>
+      <form action="" class="mt-5">
+        <label for="" class="block">
+          <span class="block font-semibold text-sm dark:text-gray-700"> Plat Kendaraan Masuk bengkel </span>
+          <input type="text" class="block mt-1 border border-sky-400 rounded-md h-20px w-full" placeholder="Plat Kendaraan" />
+        </label>
+
+        <label for="" class="block">
+          <span class="block font-semibold text-sm mt-3 dark:text-gray-700"> Tanggal Masuk Kendaraan </span>
+          <input type="date" class="block mt-1 border border-sky-400 rounded-md h-20px w-full" placeholder="Plat Kendaraan" />
+        </label>
+
+        <label for="" class="block">
+          <span class="block font-semibold text-sm mt-3 dark:text-gray-700"> Jam Masuk Kendaraan </span>
+          <input type="time" class="block mt-1 border border-sky-400 rounded-md h-20px w-full" placeholder="Plat Kendaraan" />
+        </label>
+
+        <span class="block font-semibold text-sm mt-3 dark:text-gray-700"> Servis Bagian </span>
+        <div class="flex items-center mb-4 mt-3">
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mesin</label>
+        </div>
+        <div class="flex items-center">
+          <input
+            checked
+            id="checked-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label for="checked-checkbox" class="ml-2 text-sm font-medium dark:text-gray-500">Ganti Oli</label>
+        </div>
+        <button
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 
+          focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
